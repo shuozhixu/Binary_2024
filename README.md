@@ -43,7 +43,7 @@ Record all mean and standard deviation values into an Excel file, using format s
 
 Calculate values in the second-to-last column using
 
-_A_<sub>c</sub> = 2_C_<sub>44</sub> / (_C_<sub>11</sub>-_C_<sub>12</sub>)
+_A_<sub>c</sub> = 2 _C_<sub>44</sub> / (_C_<sub>11</sub>-_C_<sub>12</sub>)
 
 Calculate values in the last column using Equation 9 of the paper in the reference list.
 
