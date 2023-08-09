@@ -39,15 +39,11 @@ Again, calculate the mean and standard deviation of the three elastic constants 
 
 Next, run simulations for the other 28 binary combination.
 
-Record all mean and standard deviation values into an Excel file, using this format:
+Record all mean and standard deviation values into an Excel file, using format similar to Tables 2 and 3 of the paper in the reference list. Calculate values in the second-to-last column using
 
- | a0 | Ecoh | C11 | C12 | C44 |
+_A_<sub>c</sub> = 2_C_<sub>44</sub> / (_C_<sub>11</sub>-_C_<sub>12</sub>)
 
-CrMo | | | | | |
-
-CrMo | | | | | |
-
-.. | | | | | |
+Calculate values in the last column using Equation 9 of the paper in the reference list.
 
 ## References
 
