@@ -58,4 +58,4 @@ run 1
 unfix 1
 next a
 
-jump lmp.in loop
+jump lmp_lat.in loop
