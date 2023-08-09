@@ -14,7 +14,9 @@ on the screen. Record these three numbers.
 
 Then modify the last two elements of line 16 of the `lmp.in` file to `Mo Cr`. Repeat the steps above. Record the result as well.
 
-Then modify the last two elements of line 16 of the `lmp.in` file to any other binary combination among Cr, Mo, Nb, Ta, V, and W. There should be 28 more such combinations. Record all results
+Then modify the last two elements of line 16 of the `lmp.in` file to any other binary combination among Cr, Mo, Nb, Ta, V, and W. There should be 28 more such combinations. Record all results.
+
+Note: Unless you run a new simulation in a new directory, you need to remove the old file `a_E` in the same directory before running the new simulation. Otherwise, new data will be added to the old `a_E` file, which is not what we want.
 
 ## Elastic constants
 
