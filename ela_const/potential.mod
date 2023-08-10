@@ -3,7 +3,7 @@
 
 # Choose potential
 pair_style	eam/alloy
-pair_coeff * * CrMoNbTaVW_Zhou04.eam.alloy Cr Mo
+pair_coeff * * CrMoNbTaVW_Xu2022.eam.alloy Cr Mo
 
 # Setup neighbor style
 neighbor 1.0 nsq

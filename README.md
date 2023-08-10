@@ -2,7 +2,7 @@
 
 ## Lattice parameters and cohesive energies
 
-Run the simulation with files `lmp_lat.in`, `data.binary`, and `CrMoNbTaVW_Zhou04.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
+Run the simulation with files `lmp_lat.in`, `data.binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
 Once the simulation is finished, you will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If you plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the paper in the reference list.
 
@@ -22,7 +22,7 @@ Note: Unless you run a new simulation in a new directory, you need to remove the
 
 ## Elastic constants
 
-Run the simulation with files `in.elastic`, `displace.mod`, `init.mod`, `potential.mod`, `data.binary`, and `CrMoNbTaVW_Zhou04.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
+Run the simulation with files `in.elastic`, `displace.mod`, `init.mod`, `potential.mod`, `data.binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
 Once the simulation is finished, go to the end of the file `lmp.out`. You will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. Specifically, they should be
 
@@ -37,9 +37,9 @@ Then, take the following two steps for `Mo Cr`:
 
 Again, calculate the mean and standard deviation of the three elastic constants between the two sets of data, i.e., six numbers in total. Record these numbers.
 
-Next, run simulations for the other 28 binary combination, i.e., other 14 alloys
+Next, run simulations for the other 28 binary combination, i.e., other 14 alloys.
 
-Record all mean and standard deviation values into an Excel file, using format similar to Tables 2 and 3 of the paper in the reference list. Note that there is no standard deviation in those two tables, but you should record them for this project.
+Record all mean and standard deviation values into an Excel file, in a format similar to Tables 2 and 3 of the paper in the reference list. Note that there is no standard deviation in those two tables, but you should record it for this project.
 
 Calculate values in the second-to-last column using
 
