@@ -52,7 +52,7 @@ variable eatom equal etotal/count(all)
 #run 0
 
 #print "${lat_para} ${eatom}" file a_E
-fix 1 all print 1 "${lat_para} ${eatom}" append a_E screen no title ""
+fix 1 all print 1 "$b ${lat_para} ${eatom}" append a_E screen no title ""
 
 run 1
 unfix 1
