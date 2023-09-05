@@ -6,7 +6,7 @@
 
 Run the simulation with files `lmp_equal.in`, `data.equal-binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
-Once the simulation is finished, you will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If you plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the second paper in the reference list.
+Once the simulation is finished, you will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If you plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the last paper in the reference list.
 
 Then run `sh min.sh` to find out the trial lattice parameter corresponding to the lowest cohesive energy (i.e., the minimum on that curve), and that would be the actual lattice parameter. Specifically, you will see
 
@@ -50,7 +50,7 @@ In total, you will run calculations in 24 non-equal-molar random binaries.
 
 Run the simulation with files `in.elastic`, `displace.mod`, `init_equal.mod`, `potential.mod`, `data.equal-binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
-Once the simulation is finished, go to the end of the file `lmp.out`. You will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the second paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. Specifically, they should be
+Once the simulation is finished, go to the end of the file `lmp.out`. You will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the last paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. Specifically, they should be
 
 	383.218 119.581 53.754
 
@@ -65,13 +65,13 @@ Again, calculate the mean and standard deviation of the three elastic constants 
 
 Next, run simulations for the other 28 binary combination, i.e., other 14 alloys.
 
-Record all mean and standard deviation values into an Excel file, in a format similar to Tables 2 and 3 of the second paper in the reference list. Note that there is no standard deviation in those two tables, but you should record it for this project.
+Record all mean and standard deviation values into an Excel file, in a format similar to Tables 2 and 3 of the last paper in the reference list. Note that there is no standard deviation in those two tables, but you should record it for this project.
 
 Calculate values in the second-to-last column using
 
 _A_<sub>c</sub> = 2 _C_<sub>44</sub> / (_C_<sub>11</sub>-_C_<sub>12</sub>)
 
-Calculate values in the last column using Equation 9 of the second paper in the reference list.
+Calculate values in the last column using Equation 9 of the last paper in the reference list.
 
 Note: in the Excel file, only one line for one alloy, e.g., only one line for CrMo, instead of `Cr Mo` and `Mo Cr` separately, because you already calculated the mean and standard deviation.
 
