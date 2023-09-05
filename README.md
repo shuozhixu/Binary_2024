@@ -28,7 +28,7 @@ Run the simulation with files `lmp_nonequal.in` and `CrMoNbTaVW_Xu2022.eam.alloy
 
 Follow the aforementioned steps and record the three numbers:
 	
-	0.957 3.15810000000007 -6.9133312202683
+	0.957 3.15810000000007 -6.9142343824172
 
 which are for the binary Mo<sub>0.9</sub>Nb<sub>0.1</sub>.
 
