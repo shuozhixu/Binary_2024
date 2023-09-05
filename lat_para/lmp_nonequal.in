@@ -9,11 +9,22 @@ atom_style      atomic
 
 # ------------------- ATOM DEFINE ------------------------------
 
-read_data	data.binary
+variable        xlen equal 10
+variable        ylen equal 10
+variable        zlen equal 10
+
+lattice         bcc 3.3 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
+region          box block -${xlen} ${xlen} -${ylen} ${ylen} -${zlen} ${zlen}
+
+create_box      2 box
+
+create_atoms    1 region box
+
+set type 1 type/ratio 2 0.1 12
 
 # ------------------- FIELD DEFINE -----------------------------
 pair_style      eam/alloy
-pair_coeff      * * CrMoNbTaVW_Xu2022.eam.alloy Cr Mo
+pair_coeff      * * CrMoNbTaVW_Zhou04.eam.alloy Mo Nb
 
 #pair_style adp
 #pair_coeff * * AuRh.adp.txt Rh
@@ -43,7 +54,7 @@ change_box all x scale $d y scale $d z scale $d remap
 thermo          1
 thermo_style    custom step lx ly lz pe etotal
 
-variable lat_para equal (lx/3.+ly/6.+lz/2.)/3.
+variable lat_para equal (lx/(2*${xlen})+ly/(2*${ylen})+lz/(2*${zlen}))/3.
 
 variable eatom equal etotal/count(all)
 
@@ -58,4 +69,4 @@ run 1
 unfix 1
 next a
 
-jump lmp_lat.in loop
+jump lmp_non.in loop
