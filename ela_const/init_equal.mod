@@ -45,7 +45,7 @@ region		box prism 0 2.0 0 3.0 0 4.0 0.0 0.0 0.0
 #create_box	1 box
 #create_atoms	1 box
 
-read_data	data.binary
+read_data	data.equal-binary
 
 variable r equal 0.924
 

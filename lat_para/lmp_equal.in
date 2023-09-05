@@ -9,7 +9,7 @@ atom_style      atomic
 
 # ------------------- ATOM DEFINE ------------------------------
 
-read_data	data.binary
+read_data	data.equal-binary
 
 # ------------------- FIELD DEFINE -----------------------------
 pair_style      eam/alloy

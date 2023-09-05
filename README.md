@@ -4,7 +4,7 @@
 
 ### Equal-molar binaries
 
-Run the simulation with files `lmp_equal.in`, `data.binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
+Run the simulation with files `lmp_equal.in`, `data.equal-binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
 Once the simulation is finished, you will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If you plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the second paper in the reference list.
 
@@ -48,7 +48,7 @@ In total, you will run calculations in 24 non-equal-molar random binaries.
 
 ### Equal-molar binaries
 
-Run the simulation with files `in.elastic`, `displace.mod`, `init.mod`, `potential.mod`, `data.binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
+Run the simulation with files `in.elastic`, `displace.mod`, `init_equal.mod`, `potential.mod`, `data.equal-binary`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
 Once the simulation is finished, go to the end of the file `lmp.out`. You will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the second paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. Specifically, they should be
 
@@ -58,7 +58,7 @@ Record these numbers.
 
 Then, take the following two steps for `Mo Cr`:
 
-- Change the last number (by default 0.924) of line 50 of the file `init.mod` to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers you recorded for `Mo Cr`;
+- Change the last number (by default 0.924) of line 50 of the file `init_equal.mod` to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers you recorded for `Mo Cr`;
 - Change the last two elements of line 6 of the file `potential.mod` to `Mo Cr`.
 
 Again, calculate the mean and standard deviation of the three elastic constants between the two sets of data, i.e., six numbers in total. Record these numbers.
