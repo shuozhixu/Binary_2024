@@ -32,17 +32,17 @@ Follow the aforementioned steps and record the three numbers:
 
 which are for the binary Mo<sub>0.9</sub>Nb<sub>0.1</sub>.
 
-Then do the calculation in Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.2 to 0.9, in increments of 0.1. You might skip _x_ = 0.5 because that is an equal-molar binary which you already calculated. For each _x_, change the second-to-last number of line 23 of `lmp_nonequal.in` to the corresponding Nb concentration. For example, change that line to
+Then do the calculation in Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.2 to 0.9, in increments of 0.1. Note that _x_ = 0.5 is for the equal-molar binary you already calculated. You may calculate it again and compare the two results. For each _x_, change the second-to-last number of line 23 of `lmp_nonequal.in` to the corresponding Nb concentration. For example, change that line to
 
 	set type 1 type/ratio 2 0.7 12
 
 for the binary Mo<sub>0.3</sub>Nb<sub>0.7</sub>.
 
-Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1. Again, _x_ = 0.5 can be skipped.
+Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1.
 
 When running these simulations, remember to change the last two elements of line 27 of the file `lmp_nonequal.in` to `Mo Ta` or `Ta Nb`.
 
-In total, you will run calculations in 24 non-equal-molar random binaries.
+In total, you will run calculations in 27 random binaries, including 3 equal-molar ones and 24 non-equal-molar ones.
 
 ## Elastic constants
 
@@ -77,7 +77,7 @@ Note: in the Excel file, only one line for one alloy, e.g., only one line for Cr
 
 ### None-equal-molar binaries
 
-Each simulation requires files `in.elastic`, `displace.mod`, `init_nonequal.mod`, `potential.mod`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Note that the third file differs from that in equal-molar binary calculations.
+Each simulation requires files `in.elastic`, `displace.mod`, `init_nonequal.mod`, `potential.mod`, and `CrMoNbTaVW_Xu2022.eam.alloy`. Note that the third file differs from that in equal-molar binary calculations. And there is no data file here.
 
 Make one change in the file `potential.mod`:
 
@@ -92,9 +92,9 @@ Then, for the binary Mo<sub>0.8</sub>Nb<sub>0.2</sub>, make two changes in the f
 - Change the last number (by default 0.957) of line 55 to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers you recorded for Mo<sub>0.8</sub>Nb<sub>0.2</sub>;
 - Change the second-to-last number (by default 0.1) of line 53 to 0.2.
 
-Repeat the steps above to calculate all Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.3 to 0.9, with 0.5 skipped.
+Repeat the steps above to calculate all Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.3 to 0.9.
 
-Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1. Again, _x_ = 0.5 can be skipped. Remember to change the last two elements of line 6 of the file `potential.mod` to `Mo Ta` or `Ta Nb`.
+Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1. Remember to change the last two elements of line 6 of the file `potential.mod` to `Mo Ta` or `Ta Nb`.
 
 ## References
 
