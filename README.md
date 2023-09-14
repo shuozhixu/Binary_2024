@@ -38,11 +38,20 @@ Then do the calculation in Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies 
 
 for the binary Mo<sub>0.3</sub>Nb<sub>0.7</sub>.
 
-Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1.
+Once the combination of Mo and Nb is done, run the calculations for the following six binaries
 
-When running these simulations, remember to change the last two elements of line 27 of the file `lmp_nonequal.in` to `Mo Ta` or `Ta Nb`.
+- Mo<sub>1-_x_</sub>Ta<sub>_x_</sub>
+- Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>
+- Mo<sub>1-_x_</sub>V<sub>_x_</sub>
+- Nb<sub>1-_x_</sub>V<sub>_x_</sub>
+- Ta<sub>1-_x_</sub>V<sub>_x_</sub>
+- V<sub>1-_x_</sub>W<sub>_x_</sub>
 
-In total, you will run calculations in 27 random binaries, including 3 equal-molar ones and 24 non-equal-molar ones.
+where _x_ varies from 0.1 to 0.9, in increments of 0.1.
+
+When running these simulations, remember to change the last two elements of line 27 of the file `lmp_nonequal.in` to `Mo Ta`, `Nb Ta`, `Mo V`, `Nb V`, `Ta V`, or `V W`.
+
+In total, you will run calculations in 63 random binaries, including 7 equal-molar ones and 56 non-equal-molar ones.
 
 ## Elastic constants
 
@@ -94,7 +103,7 @@ Then, for the binary Mo<sub>0.8</sub>Nb<sub>0.2</sub>, make two changes in the f
 
 Repeat the steps above to calculate all Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.3 to 0.9.
 
-Once the combination of Mo and Nb is done, run the calculations for the binaries Mo<sub>1-_x_</sub>Ta<sub>_x_</sub> and Nb<sub>1-_x_</sub>Ta<sub>_x_</sub>, where _x_ varies from 0.1 to 0.9, in increments of 0.1. Remember to change the last two elements of line 6 of the file `potential.mod` to `Mo Ta` or `Ta Nb`.
+Once the combination of Mo and Nb is done, run the calculations for the remaining six binaries. Remember to change the last two elements of line 6 of the file `potential.mod` to `Mo Ta`, `Nb Ta`, `Mo V`, `Nb V`, `Ta V`, or `V W`.
 
 ## References
 
