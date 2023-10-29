@@ -4,9 +4,9 @@
 
 Run the simulation with files `lmp_nonequal.in` and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
 
-Once the simulation is finished, you will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If you plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the last paper in the reference list.
+Once the simulation is finished, we will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If we plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the last paper in the reference list.
 
-Then run `sh min.sh` to find out the trial lattice parameter corresponding to the lowest cohesive energy (i.e., the minimum on that curve), and that would be the actual lattice parameter. Specifically, you will see
+Then run `sh min.sh` to find out the trial lattice parameter corresponding to the lowest cohesive energy (i.e., the minimum on that curve), and that would be the actual lattice parameter. Specifically, we will see
 	
 	0.957 3.15810000000007 -6.9142343824172
 
@@ -31,9 +31,9 @@ where _x_ varies from 0.1 to 0.9, in increments of 0.1.
 
 When running these simulations, remember to change the last two elements of line 27 of the file `lmp_nonequal.in` to `Mo Ta`, `Nb Ta`, `Mo V`, `Nb V`, `Ta V`, or `V W`.
 
-Note: Unless you run a new simulation in a new directory, you need to remove the old file `a_E` in the same directory before running the new simulation. Otherwise, new data will be appended to the old `a_E` file, which is NOT what we want.
+Note: Unless we run a new simulation in a new directory, we need to remove the old file `a_E` in the same directory before running the new simulation. Otherwise, new data will be appended to the old `a_E` file, which is NOT what we want.
 
-In total, you will run calculations in 63 random binaries, including 7 equal-molar ones and 56 non-equal-molar ones.
+In total, we will run calculations in 63 random binaries, including 7 equal-molar ones and 56 non-equal-molar ones.
 
 ### Equal-molar binaries
 
@@ -61,11 +61,11 @@ Make one change in the file `potential.mod`:
 
 Run the simulation. Using one core would be sufficient. Should take no more than a few minutes.
 
-Once it is finished, go to the end of the file `lmp.out`. You will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the last paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. These are for the binary Mo<sub>0.9</sub>Nb<sub>0.1</sub>.
+Once it is finished, go to the end of the file `lmp.out`. We will find values of `C11all`, `C12all` etc. Use Equations 10-12 of the last paper in the reference list to calculate the three effective BCC elastic constants, in units of GPa. These are for the binary Mo<sub>0.9</sub>Nb<sub>0.1</sub>.
 
 Then, for the binary Mo<sub>0.8</sub>Nb<sub>0.2</sub>, make two changes in the file `init_nonequal.mod`:
 
-- Change the last number (by default 0.957) of line 55 to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers you recorded for Mo<sub>0.8</sub>Nb<sub>0.2</sub>;
+- Change the last number (by default 0.957) of line 55 to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers we recorded for Mo<sub>0.8</sub>Nb<sub>0.2</sub>;
 - Change the second-to-last number (by default 0.1) of line 53 to 0.2.
 
 Repeat the steps above to calculate all Mo<sub>1-_x_</sub>Nb<sub>_x_</sub>, where _x_ varies from 0.3 to 0.9.
@@ -80,7 +80,7 @@ Once the simulation is finished, follow the aforementioned steps to calculate th
 
 Then, take the following two steps for `Mo Cr`:
 
-- Change the last number (by default 0.924) of line 50 of the file `init_equal.mod` to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers you recorded for `Mo Cr`;
+- Change the last number (by default 0.924) of line 50 of the file `init_equal.mod` to the correct ratio identified in the prior lattice parameter calculation, i.e., the first of the three numbers we recorded for `Mo Cr`;
 - Change the last two elements of line 6 of the file `potential.mod` to `Mo Cr`.
 
 Again, calculate the mean and standard deviation of the three elastic constants between the two sets of data, i.e., six numbers in total. Record these numbers.
@@ -91,6 +91,6 @@ Next, run simulations for the other 28 binary combination, i.e., other 14 alloys
 
 If you use any files from this GitHub repository, please cite
 
-- Cesar Ruiz, Anshu Raj, Shuozhi Xu, a paper, APL Mach. Learn. (under review)
+- Cesar Ruiz, Anshu Raj, Shuozhi Xu, Multivariate Gaussian process surrogates for structural parameter prediction of non-dilute random alloys based on few atomistic simulations, APL Mach. Learn. (under review)
 - Abdullah Al Mamun, Shuozhi Xu, Xiang-Guo Li, Yanqing Su, [Comparing interatomic potentials in calculating basic structural parameters and Peierls stress in tungsten-based random binary alloys](http://dx.doi.org/10.1088/1402-4896/acf533), Phys. Scr. 98 (2023) 105923
 - Shuozhi Xu, Saeed Zare Chavoshi, Yanqing Su, [On calculations of basic structural parameters in multi-principal element alloys using small atomistic models](http://dx.doi.org/10.1016/j.commatsci.2021.110942), Comput. Mater. Sci. 202 (2022) 110942
