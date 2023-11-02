@@ -91,6 +91,6 @@ Next, run simulations for the other 28 binary combination, i.e., other 14 alloys
 
 If you use any files from this GitHub repository, please cite
 
-- Cesar Ruiz, Anshu Raj, Shuozhi Xu, Multivariate Gaussian process surrogates for structural parameter prediction of non-dilute random alloys based on few atomistic simulations, APL Mach. Learn. (under review)
+- Cesar Ruiz, Anshu Raj, Shuozhi Xu, Multivariate Gaussian process surrogates for predicting basic structural parameter of refractory non-dilute random alloys, APL Mach. Learn. (under review)
 - Abdullah Al Mamun, Shuozhi Xu, Xiang-Guo Li, Yanqing Su, [Comparing interatomic potentials in calculating basic structural parameters and Peierls stress in tungsten-based random binary alloys](http://dx.doi.org/10.1088/1402-4896/acf533), Phys. Scr. 98 (2023) 105923
 - Shuozhi Xu, Saeed Zare Chavoshi, Yanqing Su, [On calculations of basic structural parameters in multi-principal element alloys using small atomistic models](http://dx.doi.org/10.1016/j.commatsci.2021.110942), Comput. Mater. Sci. 202 (2022) 110942
