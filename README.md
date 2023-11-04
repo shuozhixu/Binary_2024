@@ -2,7 +2,9 @@
 
 ## Lattice parameters and cohesive energies
 
-Run the simulation with files `lmp_nonequal.in` and `CrMoNbTaVW_Xu2022.eam.alloy`. Using one core would be sufficient. Should take no more than a few seconds.
+Run the simulation with files `lmp_nonequal.in` and `CrMoNbTaVW_Xu2022.eam.alloy`. The second file can be found in [another GitHub repository](https://github.com/shuozhixu/CMS_2022).
+
+Using one core would be sufficient. Should take no more than a few seconds.
 
 Once the simulation is finished, we will find a new file `a_E`. The first column is the ratio of the trial lattice parameter to 3.3, the second column is the trial lattice parameter itself, in units of Anstrong, the thrid column is the cohesive energy, in units of eV. If we plot a curve with the second column as the _x_ axis and the third column as the _y_ axis, the curve should look like the ones in Figure 1(a) of the last paper in the reference list.
 
