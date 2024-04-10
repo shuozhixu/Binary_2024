@@ -95,4 +95,4 @@ Data obtained through the above calculations, as well as those by [Xu et al.](ht
 
 If you use any files from this GitHub repository, please cite
 
-- Cesar Ruiz, Anshu Raj, Shuozhi Xu, Multivariate Gaussian process surrogates for predicting basic structural parameter of refractory non-dilute random alloys, APL Mach. Learn. (under review)
+- Cesar Ruiz, Anshu Raj, Shuozhi Xu, [Multivariate Gaussian process surrogates for predicting basic structural parameter of refractory non-dilute random alloys](https://doi.org/10.1063/5.0186045), APL Mach. Learn. 2 (2024) 026107
