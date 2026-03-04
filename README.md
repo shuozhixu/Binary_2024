@@ -1,4 +1,4 @@
-# Random binary alloys
+# Random binary alloys: Basic structural parameters
 
 ## Lattice parameters and cohesive energies
 
